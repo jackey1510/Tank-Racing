@@ -6,6 +6,12 @@ TagManager:
   tags:
   - shotSpawn
   - Shot
+  - shot2
+  - gate
+  - Player2
+  - Player1
+  - RedGate1
+  - BlueGate1
   layers:
   - Default
   - TransparentFX
@@ -45,6 +51,9 @@ TagManager:
     locked: 0
   - name: Midground
     uniqueID: 1770341679
+    locked: 0
+  - name: Midforeground
+    uniqueID: 3743013319
     locked: 0
   - name: Foreground
     uniqueID: 89625545
