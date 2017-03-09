@@ -5,7 +5,7 @@ using UnityEngine;
 public class Gate_red : MonoBehaviour
 {
 
-    public float slow = 0.1f;
+    public float slow = 0.8f;
     void OnTriggerStay2D(Collider2D other)
     {
         if (other.tag == "Player2")

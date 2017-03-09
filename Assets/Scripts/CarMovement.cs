@@ -7,7 +7,7 @@ public class CarMovement : MonoBehaviour {
 	public float acceleration = 0.2f;
 	public float braking = 0.3f;
 	public float steering = 4.0f;
-
+	public bool canShoot = true;
 	public GameObject shot;
 	public Transform shotSpawn;
 	public float fireRate = 0.5f;
@@ -24,10 +24,11 @@ public class CarMovement : MonoBehaviour {
 
 	void Update ()
 	{
-		if (_inputs.GetFireButton() && Time.time > nextFire) 
-		{
-			nextFire = Time.time + fireRate;
-			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+		if (canShoot == true) {
+			if (_inputs.GetFireButton () && Time.time > nextFire) {
+				nextFire = Time.time + fireRate;
+				Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
+			}
 		}
 	}
 

@@ -5,13 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - shotSpawn
-  - Shot
   - shot2
   - gate
   - Player2
   - Player1
   - RedGate1
   - BlueGate1
+  - RedGate2
+  - shot1
   layers:
   - Default
   - TransparentFX
