@@ -7,6 +7,7 @@ public class Timer : MonoBehaviour
     public Text timerLabel;
 	public Text cd;
 	public bool countDownDone = false;
+	public bool count = false;
 
     private float time;
 	private string countDown;
@@ -18,17 +19,19 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-		cd.text = countDown;
+		if (count) {
+			cd.text = countDown;
 
-		if (countDownDone) {
-			time += Time.deltaTime;
+			if (countDownDone) {
+				time += Time.deltaTime;
 
-			var minutes = time / 60; //Divide the guiTime by sixty to get the minutes.
-			var seconds = time % 60;//Use the euclidean division for the seconds.
-			var fraction = (time * 100) % 100;
+				var minutes = time / 60; //Divide the guiTime by sixty to get the minutes.
+				var seconds = time % 60;//Use the euclidean division for the seconds.
+				var fraction = (time * 100) % 100;
 
-			//update the label value
-			timerLabel.text = string.Format ("{0:00}:{1:00}:{2:00}", minutes, seconds, fraction);
+				//update the label value
+				timerLabel.text = string.Format ("{0:00}:{1:00}:{2:00}", minutes, seconds, fraction);
+			}
 		}
     }
 
@@ -54,14 +57,4 @@ public class Timer : MonoBehaviour
 			countDown = ""; 
 		}
 	}
-//	void OnGui(){
-//		GUI.color = Color.red;
-//		GUI.Box (new Rect (0, 0, 10, 10), "Ready");
-//
-//		GUI.color = Color.white;
-//		GUI.Box (new Rect(0, 0, 10, 10), countDown);
-//
-//
-//
-//	}
 }

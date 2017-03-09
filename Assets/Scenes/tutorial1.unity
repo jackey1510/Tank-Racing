@@ -600,7 +600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5670ffea0a34b7e49a8e2a13509f0d44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 0.8
+  slow: 0.7
 --- !u!61 &347032255
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -861,6 +861,11 @@ Prefab:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114476471671637786, guid: 2ffde273289095f49a1ed05ddb9167f7,
+        type: 2}
+      propertyPath: slow
+      value: 0.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ffde273289095f49a1ed05ddb9167f7, type: 2}
   m_IsPrefabParent: 0
@@ -996,7 +1001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5670ffea0a34b7e49a8e2a13509f0d44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 0.8
+  slow: 0.7
 --- !u!61 &457224160
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1063,6 +1068,11 @@ Prefab:
     - target: {fileID: 1059120456575678, guid: a68c2389f17f98b4cb1f9ec4fd8a6f7a, type: 2}
       propertyPath: m_TagString
       value: BlueGate1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660399303488390, guid: a68c2389f17f98b4cb1f9ec4fd8a6f7a,
+        type: 2}
+      propertyPath: slow
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a68c2389f17f98b4cb1f9ec4fd8a6f7a, type: 2}
@@ -1173,6 +1183,11 @@ Prefab:
     - target: {fileID: 1059120456575678, guid: a68c2389f17f98b4cb1f9ec4fd8a6f7a, type: 2}
       propertyPath: m_TagString
       value: BlueGate1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660399303488390, guid: a68c2389f17f98b4cb1f9ec4fd8a6f7a,
+        type: 2}
+      propertyPath: slow
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a68c2389f17f98b4cb1f9ec4fd8a6f7a, type: 2}
@@ -1379,6 +1394,11 @@ Prefab:
       propertyPath: m_TagString
       value: BlueGate1
       objectReference: {fileID: 0}
+    - target: {fileID: 114660399303488390, guid: a68c2389f17f98b4cb1f9ec4fd8a6f7a,
+        type: 2}
+      propertyPath: slow
+      value: 0.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a68c2389f17f98b4cb1f9ec4fd8a6f7a, type: 2}
   m_IsPrefabParent: 0
@@ -1551,6 +1571,7 @@ MonoBehaviour:
   timerLabel: {fileID: 1271181521}
   cd: {fileID: 1248664386}
   countDownDone: 0
+  count: 1
 --- !u!23 &851374755
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2386,10 +2407,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -3539,7 +3560,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1825359719}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.9, y: 13.17, z: 0}
+  m_LocalPosition: {x: 7.5, y: 13.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 201046871}
@@ -3754,7 +3775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5670ffea0a34b7e49a8e2a13509f0d44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 0.8
+  slow: 0.7
 --- !u!61 &1941565740
 BoxCollider2D:
   m_ObjectHideFlags: 0
