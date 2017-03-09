@@ -1,34 +1,35 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class CarLapCounter : MonoBehaviour {
 
 	public TrackLapTrigger first;
 	public TextMesh textMesh;
+	public Text winMessage;
+	public string color;
+
 
 	TrackLapTrigger next;
 	
-	int _lap;
+	private int lap;
 
-	// Use this for initialization
 	void Start () {
-		_lap = 0;
+		lap = 1;
 		SetNextTrigger(first);
 		UpdateText();
 	}
-
-	// update lap counter text
+		
 	void UpdateText() {
 		if (textMesh) {
-			textMesh.text = string.Format("Lap {0}", _lap);		
+			textMesh.text = string.Format("Lap {0}/3", lap);		
 		}
 	}
-
-	// when lap trigger is entered
+		
 	public void OnLapTrigger(TrackLapTrigger trigger) {
 		if (trigger == next) {
 			if (first == next) {
-				_lap++;
+				lap++;
 				UpdateText();
 			}
 			SetNextTrigger(next);
@@ -38,5 +39,11 @@ public class CarLapCounter : MonoBehaviour {
 	void SetNextTrigger(TrackLapTrigger trigger) {
 		next = trigger.next;
 		SendMessage("OnNextTrigger", next, SendMessageOptions.DontRequireReceiver);
+	}
+
+	void Update(){
+		if (lap > 3) {
+			winMessage.text = color + " Wins!!";
+		}
 	}
 }

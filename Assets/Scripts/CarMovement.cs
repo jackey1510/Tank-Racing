@@ -14,9 +14,6 @@ public class CarMovement : MonoBehaviour {
 	private float nextFire;
 	PlayerInputs _inputs;
 
-
-
-	// Use this for initialization
 	void Start () {
 		_inputs = GetComponent<PlayerInputs>();
 
@@ -24,37 +21,36 @@ public class CarMovement : MonoBehaviour {
 
 	void Update ()
 	{
-		if (canShoot == true) {
-			if (_inputs.GetFireButton () && Time.time > nextFire) {
-				nextFire = Time.time + fireRate;
-				Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
+		if (GameObject.Find ("Timer").GetComponent<Timer>().countDownDone) {
+			if (canShoot == true) {
+				if (_inputs.GetFireButton () && Time.time > nextFire) {
+					nextFire = Time.time + fireRate;
+					Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
+				}
 			}
 		}
 	}
-
-	// update for physics
+		
 	void FixedUpdate() {
-		// steering
+		if (GameObject.Find ("Timer").GetComponent<Timer> ().countDownDone) {
+			float s = steering;
+			GetComponent<Rigidbody2D> ().AddTorque (_inputs.x * s * -0.2f);
+			float rot = transform.localEulerAngles.z - _inputs.x * s;
+			transform.localEulerAngles = new Vector3 (0.0f, 0.0f, rot);
 
-		float s = steering;
-		GetComponent<Rigidbody2D>().AddTorque(_inputs.x * s * -0.2f);
-		float rot = transform.localEulerAngles.z - _inputs.x * s;
-		transform.localEulerAngles = new Vector3(0.0f, 0.0f, rot);
+			// acceleration/braking
+			float velocity = GetComponent<Rigidbody2D> ().velocity.magnitude;
+			float y = _inputs.y;
+			if (y > 0.01f) {
+				velocity += y * acceleration;
+			} else if (y < -0.01f) {
+				velocity += y * braking;
+			}
+			GetComponent<Rigidbody2D> ().AddForce (transform.up * _inputs.y * acceleration * 50.0f);
 
-		// acceleration/braking
-		float velocity = GetComponent<Rigidbody2D>().velocity.magnitude;
-		float y = _inputs.y;
-		if (y > 0.01f) {
-			velocity += y * acceleration;
-		} else if (y < -0.01f) {
-			velocity += y * braking;
+			GetComponent<Rigidbody2D> ().velocity = transform.up * velocity;
+			GetComponent<Rigidbody2D> ().angularVelocity = 0.0f;
 		}
-
-		// apply car movement
-		GetComponent<Rigidbody2D>().AddForce(transform.up * _inputs.y * acceleration * 50.0f);
-
-		GetComponent<Rigidbody2D>().velocity = transform.up * velocity;
-		GetComponent<Rigidbody2D>().angularVelocity = 0.0f;
 	}
 
 }

@@ -15,7 +15,7 @@ public class FinishTutorial0 : MonoBehaviour {
 	}
 	void Update(){
 		if (p1Arrive == true && p2Arrive == true) {
-			Application.LoadLevel ("tutorial1");
+			Application.LoadLevel ("tutorial0.5");
 		}
 	}
 }
