@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CarLapCounter : MonoBehaviour {
 
@@ -13,7 +14,7 @@ public class CarLapCounter : MonoBehaviour {
 	TrackLapTrigger next;
 	
 	private int lap;
-
+	private bool hasWon = false;
 	void Start () {
 		lap = 1;
 		SetNextTrigger(first);
@@ -30,7 +31,9 @@ public class CarLapCounter : MonoBehaviour {
 		if (trigger == next) {
 			if (first == next) {
 				lap++;
-				UpdateText();
+				if (lap <= 3) {
+					UpdateText ();
+				}
 			}
 			SetNextTrigger(next);
 		}
@@ -42,8 +45,14 @@ public class CarLapCounter : MonoBehaviour {
 	}
 
 	void Update(){
-		if (lap > 3) {
-			winMessage.text = color + " Wins!!";
+		if (GameObject.Find ("Timer").GetComponent<Timer>().countDownDone == true && lap > 3) {
+			winMessage.text = color + " Wins!!\nPress R to restart";
+			GameObject.Find ("Timer").GetComponent<Timer>().countDownDone = false;
 		}
+		if (Input.GetKeyDown("r")){
+			SceneManager.LoadScene("tutorial1",LoadSceneMode.Single);
+		}
+			
+
 	}
 }
