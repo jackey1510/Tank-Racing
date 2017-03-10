@@ -37,6 +37,14 @@ public class Timer : MonoBehaviour
 
 	IEnumerator ready(){
 		if (!countDownDone) {
+			countDown = "Finish 3 Laps to Win!";    
+			Debug.Log ("F3");
+			yield return new WaitForSeconds (1f); 
+
+			countDown = "Ready?";    
+			Debug.Log ("Ready?");
+			yield return new WaitForSeconds (1f); 
+
 			countDown = "3";    
 			Debug.Log ("3");
 			yield return new WaitForSeconds (1f);  
@@ -49,10 +57,10 @@ public class Timer : MonoBehaviour
 			yield return  new WaitForSeconds (1f);
 			Debug.Log ("1");
 
-			countDown = "GO";    
+			countDown = "GO!";    
 			yield return  new WaitForSeconds (1f);
 			countDownDone = true;
-			Debug.Log ("GO");
+			Debug.Log ("GO!");
 
 			countDown = ""; 
 		}

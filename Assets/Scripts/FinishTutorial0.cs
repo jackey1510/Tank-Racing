@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class FinishTutorial0 : MonoBehaviour {
 	private bool p1Arrive = false;
 	private bool p2Arrive = false;
@@ -15,7 +15,7 @@ public class FinishTutorial0 : MonoBehaviour {
 	}
 	void Update(){
 		if (p1Arrive == true && p2Arrive == true) {
-			Application.LoadLevel ("tutorial0.5");
+			SceneManager.LoadScene("tutorial0.2",LoadSceneMode.Single);
 		}
 	}
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FinishTutorial1 : MonoBehaviour {
 
@@ -16,7 +17,7 @@ public class FinishTutorial1 : MonoBehaviour {
 	}
 	void Update(){
 		if (p1Arrive == true && p2Arrive == true) {
-			Application.LoadLevel ("tutorial1");
+			SceneManager.LoadScene("tutorial1",LoadSceneMode.Single);
 		}
 	}
 }

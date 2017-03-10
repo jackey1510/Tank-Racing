@@ -1,19 +1,20 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GateController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\FinishTutorial2.cs">
     <Files>
-      <File FileName="Assets\Scripts\Shot.cs" Line="21" Column="2" />
-      <File FileName="Assets\Scripts\CarMovement.cs" Line="17" Column="17" />
-      <File FileName="Assets\Scripts\GateControlRed.cs" Line="16" Column="26" />
-      <File FileName="Assets\Scripts\Gate_blue.cs" Line="6" Column="3" />
-      <File FileName="Assets\Scripts\Gate_red.cs" Line="3" Column="19" />
-      <File FileName="Assets\GateController.cs" Line="11" Column="26" />
-      <File FileName="Assets\Scripts\GateControlBlue.cs" Line="16" Column="26" />
-      <File FileName="Assets\Scripts\TrackLapTrigger.cs" Line="14" Column="37" />
-      <File FileName="Assets\Scripts\CarLapCounter.cs" Line="12" Column="2" />
-      <File FileName="Assets\Scripts\Timer.cs" Line="3" Column="1" />
-      <File FileName="Assets\Scripts\FinishTutorial0.cs" Line="15" Column="3" />
-      <File FileName="Assets\Scripts\GameController.cs" Line="14" Column="4" />
+      <File FileName="Assets\Scripts\Shot.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CarMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GateControlRed.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Gate_blue.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Gate_red.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GateControlBlue.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TrackLapTrigger.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CarLapCounter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Timer.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\FinishTutorial0.cs" Line="20" Column="3" />
+      <File FileName="Assets\Scripts\GameController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\FinishTutorial2.cs" Line="15" Column="4" />
+      <File FileName="Assets\Scripts\FinishTutorial1.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

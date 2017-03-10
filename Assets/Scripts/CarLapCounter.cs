@@ -14,7 +14,6 @@ public class CarLapCounter : MonoBehaviour {
 	TrackLapTrigger next;
 	
 	private int lap;
-	private bool hasWon = false;
 	void Start () {
 		lap = 1;
 		SetNextTrigger(first);

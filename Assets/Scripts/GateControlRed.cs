@@ -14,11 +14,6 @@ public class GateControlRed : MonoBehaviour
 		
 		if (gateOn == true) {
 			if (coll.tag == "shot1") {
-				//Destroy(GameObject.FindWithTag(string.Format("RedGate{0}",gateNumber)));
-				//scale = redGate.transform.localScale;
-				//Instantiate (blueGate, redGate.transform.position, redGate.transform.rotation);
-				//blueGate.transform.localScale = scale;
-
 				redGate.transform.position += Vector3.up*100f;
 				gateOn = false;
 				Destroy (coll.gameObject);
@@ -30,10 +25,6 @@ public class GateControlRed : MonoBehaviour
 			}
 		} else {
 			if (coll.tag == "shot2") {
-				//Destroy(GameObject.FindWithTag(string.Format("RedGate{0}",gateNumber)));
-				//scale = redGate.transform.localScale;
-				//Instantiate (blueGate, redGate.transform.position, redGate.transform.rotation);
-				//blueGate.transform.localScale = scale;
 				redGate.transform.position -= Vector3.up*100f;
 				gateOn = true;
 				Destroy (coll.gameObject);
